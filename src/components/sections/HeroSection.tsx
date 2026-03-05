@@ -1,4 +1,3 @@
-import heroVideo from "@/assets/hero-factory-video.mp4";
 import heroImg from "@/assets/hero-factory.jpg";
 
 const HeroSection = () => {
@@ -8,16 +7,10 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster={heroImg}
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src={heroVideo} type="video/mp4" />
-      </video>
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroImg})` }}
+      />
       <div className="absolute inset-0 bg-dark-surface/75" />
 
       <div className="relative z-10 container-main text-center px-4 py-32">
